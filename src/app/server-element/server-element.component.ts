@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -7,10 +7,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ServerElementComponent implements OnInit {
+  @Input() element: { type: string, name: string, content: string};
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }
